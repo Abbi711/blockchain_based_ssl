@@ -1,0 +1,38 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+	<br>
+	
+	<center>
+<h1> Enter unique serial number: </h1>
+	<form action="/validate" id="textform" method="post">
+	   Serial number: <input type="text" name="version"> <br>
+	
+	    <input type="submit" value="VALIDATE">
+	</form>
+	</center>
+
+	<br>
+         
+	
+	
+	<div style="margin: 20px;">
+
+	<style>
+		
+		.option-btn {
+		    background: #f8f8f8;
+		    border: none;
+		    color: #2c3e50;
+		    padding: 7px;
+		    cursor: pointer;
+		    font-size: 14px;
+		    margin-left: 2px;
+		    margin-right: 2px;
+		    outline: none;
+		    height: 42px;
+		}
+	</style>
+    </div>
+{% endblock %}
