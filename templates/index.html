@@ -1,0 +1,49 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+	<br>
+	
+	<center>
+<h1> Add a new Certificate </h1>
+	<form action="/new_transaction" id="textform" method="post">
+	   Version: <input type="text" name="version"> <br>
+	Serial: <input type="text" name="serial"> <br>
+	    Signature Algorithm Identifier: <input type="text" name="signature"><br>
+		Issuer Name: <input type="text" name="issuer"><br>
+		Validity period: <input type="text" name="validity"><br>
+		Subject Name: <input type="text" name="subject"><br>
+		Public key Information: <input type="text" name="public_key"><br>
+		Issuer unique ID: <input type="text" name="issuer_id"><br>
+		Subject unique ID: <input type="text" name="subject_id"><br>
+		Extensions: <input type="text" name="extension"><br>
+
+
+	    <input type="submit" value="Post">
+	</form>
+	</center>
+
+	<br>
+         
+	
+	
+	<a href="{{node_address}}/pending_tx"><button>Unconfirmed transactions</button></a>
+	<div style="margin: 20px;">
+
+	<style>
+		
+		.option-btn {
+		    background: #f8f8f8;
+		    border: none;
+		    color: #2c3e50;
+		    padding: 7px;
+		    cursor: pointer;
+		    font-size: 14px;
+		    margin-left: 2px;
+		    margin-right: 2px;
+		    outline: none;
+		    height: 42px;
+		}
+	</style>
+    </div>
+{% endblock %}
